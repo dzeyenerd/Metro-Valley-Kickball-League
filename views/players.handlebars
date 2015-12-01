@@ -1,0 +1,24 @@
+<section class="players">
+	{{#data}}
+		<div style="display:flex" class="player">
+			{{#if photo}}
+				<div class="pimage" style="background-image:url('images/uploads/userPhoto-{{id}}.jpg')"></div>
+			{{else}}
+			<div class="pimage" style="background-image:url('images/uploads/user.png')"></div>
+			{{/if}}
+			<span class="clear"></span>
+			<div class="info">
+				<h4>Name</h4>
+				{{name}}
+			</div>
+			<div class="info">
+				<h4>Username</h4>
+				{{username}}
+			</div>
+			<div class="info">
+				<h4>Bio</h4>
+				{{bio}}
+			</div>
+		</div>
+	{{/data}}
+</section>

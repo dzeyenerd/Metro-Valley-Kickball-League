@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/fontello.css">
+    <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script type="text/javascript" src="/js/scripts.js"></script>
+  </head>
+  <body>
+  	<div class="container">
+	  	<header>
+	     {{#if user.username}}
+
+	     	<span class="hello">
+				<span class="greeting">Hello, {{user.name}}</span>
+				<span class="logout"><a href="/logout">Logout</a>
+			</span>
+
+			{{else}}
+			<span>
+			    <a href="/login" class="btn-default login">Login</a>
+	            <a href="/signup" class="btn-default signup">Signup</a>
+        	</span>
+			{{/if}}
+	  	</header>
+	  	<nav>
+	  		<ul>
+	  			<li><a href="/">Home</a></li>
+	  			<li><a href="/players">Players</a></li>
+	  			<li><a href="/league">League</a></li>
+	  			<li><a href="/schedule">Schedule</a></li>
+	  		</ul>
+	  	</nav>
+	  	<div class="content">
+
+	  		<h1 class="title">{{title}}</h1>
+	  		<div class="contentBox">
+	  			{{{body}}}
+	  		</div>
+	  	</div>
+  	</div>
+  </body>
+</html>
+
+
+						
+

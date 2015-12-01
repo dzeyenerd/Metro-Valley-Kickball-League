@@ -1,0 +1,84 @@
+
+<div class="profileContent">
+	<div class="userPhoto">
+
+		{{#user}}
+		
+	  	{{#if photo}}
+	    <img src="images/uploads/userPhoto-{{id}}.jpg" width="200px">
+	    {{else}}
+	    <img src="images/uploads/user.png" width="200px">
+	  	{{/if}}
+
+	  <button class="edit" id="updatePhoto">updatePhoto</button>
+ 	  <div class="photoForm hide">
+		<form id="uploadForm"enctype="multipart/form-data"action="/image"method="post">
+			<input type="file" name="userPhoto-{{id}}">
+			<input type="hidden" value="{{id}}" name="id">
+			<br>
+			<input type="button" value="Cancel" id="cancel" name="cancel"><input type="submit" value="Upload Image" name="submit"><br>
+			<span id = "status"></span>
+		</form>
+	  </div>
+	</div>
+	<div class="profileInfo"> 
+		<div>
+			<p><strong>Name</strong>: {{name}}</p>
+			<p><strong>Username</strong>: {{username}}</p>
+			<p><strong>Gender</strong>: {{gender}}</p>
+			<p><strong>Birth Date</strong>: {{dob}}</p>
+			<p><strong>Team</strong>: {{team}}</p>
+			<p><strong>Position(s)</strong>: {{position}}</p>
+			<p><strong>Bio</strong>: {{bio}}</p>
+			{{/user}} 
+			<button class="edit" id="showEdit">Edit Info</button>
+		</div>
+	</div>
+	<span class="clear"> </span>
+
+	<div class="editProfile hide">
+		<div class="flexedit">
+			<form action="/profile" method="post">
+				<div>
+					{{#user}}
+					<input type="hidden" name="userid" value="{{id}}">
+					<label>Name:</label><input type="text" name="name" value="{{name}}"><br>
+					<label>Username:</label><input type="text" name="username" value="{{username}}"><br>
+					<label>Birth Date:</label><input type="text" name="dob" id="datepicker" value="{{dob}}"><br>
+					<label>bio:</label><textarea name="bio">{{bio}}</textarea>
+				</div>
+				<div style="padding-left:30px">
+					<div style="margin-bottom:15px">
+						<label>Position</label>
+						<input type="checkbox" name="position" value="Outfield">Outfield <input type="checkbox" name="position" value="Pitcher">Pitcher
+						<input type="checkbox" name="position" value="Catcher">Catcher  <input type="checkbox" name="position" value="Infield">Infield
+					</div>
+					<div style="margin-bottom:15px">
+						<label>Gender</label>
+						<input type="radio" name="gender" value="Male"> Male <input type="radio" name="gender" value="Female"> Female
+						<input type="radio" name="gender" value="N/A" style="opacity:0" checked="checked">
+					</div>
+						{{/user}}
+						<label>Team</label>
+			    		<select name="team">
+				 			<option value="">Select one</option>
+			 					{{#data}}
+							<option value="{{team}}">{{team}}</option>
+								{{/data}}
+						</select> 
+						<div class="buttongroup">
+							<input type="button" value="Cancel" id="profileCancel"> <input type="submit" value="Update"> <input type="button" value="Delete" id="pofileDelet">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	  <script>
+	  $(function() {
+	    $( "#datepicker" ).datepicker();
+	  });
+
+	  </script>
+
+

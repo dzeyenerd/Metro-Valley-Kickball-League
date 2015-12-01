@@ -1,0 +1,65 @@
+{{!-- 
+{{#data}}
+<p>
+	<a href="#" id="{{league_id}}"><strong>id</strong>: {{league_id}}-
+		<strong>league</strong>: {{league}}
+	</a>
+</p>
+{{/data}}
+</p> --}}
+
+
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+<script>
+		var map;
+		function initialize() {
+		  map = new google.maps.Map(document.getElementById('map-canvas'), {
+		    center: new google.maps.LatLng(33.321279, -111.956803), // Munich Germany
+		    zoom: 13
+		  });
+		}
+
+		function newLocation(newLat,newLng) {
+			map.setCenter({
+				lat : newLat,
+				lng : newLng
+			});
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<script>
+	$(document).ready(function () {
+	     $("#1").on('click', function () {
+		  newLocation(33.371453, -111.902443);
+		});
+		 $("#2").on('click', function () {
+		  newLocation(33.291997, -111.976944);
+		});
+	   $("#3").on('click', function () {
+		  newLocation(33.321279, -111.956803);
+		});
+	});
+</script>
+  </head>
+  <body>
+	  <div>
+		<div class="flexmap">
+			<div class="league-img" style="background-image: url('../images/game.jpg')">
+				
+			</div>
+			<div style="height:350px; width:350px;" id="map-canvas"></div>
+		</div>
+		<div>
+			{{#data}}
+			<p>
+				<a href="#" id="{{league_id}}"><strong>id</strong>: {{league_id}}-
+					<strong>league</strong>: {{league}}
+				</a>
+			</p>
+			{{/data}}
+			</p>
+			
+		</div>
+	  </div>

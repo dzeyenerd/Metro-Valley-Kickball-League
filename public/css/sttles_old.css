@@ -1,0 +1,431 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+/****************************************
+  Inherited Syles
+*****************************************/
+
+/*
+See this explanation for details
+https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*/
+
+html {
+    box-sizing: border-box;
+    color: #444;
+    font: 12pt 'Open Sans', Arial;
+    font-weight: 300;
+    margin:0;
+
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    color: inherit;
+    font: inherit;
+}
+
+
+/****************************************
+  Defaults
+*****************************************/
+input {
+  margin-bottom: 10px;
+}
+.create-user{
+  width: 275px;
+  margin-top: 8px;
+}
+
+.collapse.expand {
+  width: 250px;
+
+}
+
+.position {
+
+}
+
+.profile {
+  margin-top: 8px;
+  border-radius: 5px;
+
+}
+
+.edit {
+  margin-top: 8px;
+  border-radius: 5px;
+  
+}
+
+#bio {
+
+width: 516px; 
+height: 150px;
+resize: none;
+}
+/****************************************
+  Helpers
+*****************************************/
+
+
+/****************************************
+  Layout
+*****************************************/
+  header {
+  
+  }
+
+  a.home  {
+  top left: 0;
+  color: red;
+  position: absolute;
+  top: 30px;
+  left: 110px;
+  text-decoration: none;
+ /* position: fixed;*/
+
+}
+
+.log-in {
+  position: absolute;
+  top: 28px;
+  right: 59px;
+  text-decoration: none;
+  /*position: fixed;*/
+}
+
+header button {
+  background-color: green;
+  position: absolute;
+  top: 20px;
+  right: 160px;
+  border-radius: 5px;
+  /*position: fixed;*/
+}
+
+.hero {
+  height: 500px;
+  width: 1400px;
+  background-color: blue;
+  position: absolute;
+  top: 80px;
+}
+
+.footer {
+  height: 200px;
+  width: 1400px;
+  background-color: gray;
+  position: absolute;
+  bottom: -182px;
+}
+
+.menubar {
+  display: block;
+  background-color: darkslateblue;
+  width: 336px;
+  position: fixed;
+  top: 100px;
+  padding-top: 50px;
+  padding-bottom: 250px;
+}
+
+.menu {
+  color: white;
+  font: 40px bold;
+  padding: 10px;
+  display: block;
+  width: 336px;
+  text-decoration: none;
+}
+
+/****************************************
+  Components for user
+*****************************************/
+
+.profile-container {
+  /*height: 520px;*/
+  width: 850px;
+  background-color: cornsilk;
+  position: absolute;
+  border: solid 2px black;
+  padding: 10px;
+  top: 100px;
+  right: 150px;
+}
+
+.profile-box {
+  background-color: darkkhaki ;
+  padding: 17px;
+  /*height: 500px;*/
+  display: flex;
+
+}
+
+.profile-pic {
+  flex: 1;
+ /* height: 300px;
+  width: 300px;*/
+  background-color: cornflowerblue;
+
+}
+
+/*.pic {
+  height: 262px;
+  width: 262px;
+  margin-top: 60px;
+  margin-left: 55px;
+  background-color: cadetblue;
+}*/
+
+.profile-content {
+  flex: 2;
+  padding-left: 8px;
+  padding-bottom: 8px;
+  background-color: lightseagreen;
+
+}
+
+
+/****************************************
+  Components for league page
+*****************************************/
+.league-container {
+  display: flex;
+  overflow: hidden;
+  background-color: blue;
+  border: solid 3px;
+  position: absolute;
+  top: 100px;
+  left: 344px;
+  height: 562px;
+  width: 1080px;
+}
+.field-pic {
+ 
+  height: 538px;
+  width: 700px;
+  background-color: darkkhaki;
+  position: relative;
+  top: 10px;
+  left: 5px;
+}
+
+.league-night {
+  text-align: center;
+  font-size: 2em;
+  padding: 3px;
+  background-color: cornsilk;
+  position: relative;
+  top: 269px;
+}
+
+.league-description {
+  padding: 5px;
+  background-color: orange;
+  position: relative;
+  bottom: -247px;
+}
+
+.register {
+  
+}
+.join {
+  border-radius: 5px;
+}
+
+.map-container{
+  flex: 1;
+    background-color: green;
+    position: relative;
+    top: 10px;
+    left: 5px;
+    height: 538px;
+   /* width: 420px*/
+
+}
+.map-area {
+    height: 315px;
+    /*width: 404px;*/
+    background-color: lightblue;
+   /* transform: translate(10px, 7px)*/
+}
+
+.park-time {
+  background-color: white;
+  text-align: center;
+  top-padding: 5px;
+}
+
+.park {
+    background-color: cornsilk;
+    text-align: center;
+    font-size: 2em;
+    padding: 3px;
+    transform: translate(-1px, -12px)
+}
+
+.time {
+    background-color: cornsilk;
+    text-align: center;
+    font-size: 2em;
+    padding: 3px;
+    transform: translate(-1px, -40px)
+}
+
+/****************************************
+  Components for players
+*****************************************/
+
+.player-container {
+  /*width: 1060px;
+  height: 285px;*/
+  padding: 2px;
+  background-color: lightgreen;
+  float: right;
+  margin-top: 100px;
+}
+
+.player-profile {
+  display: flex;
+  width: 1056px;
+  height: 280px;
+  padding: 6px;
+  padding-top: 5px;
+  background-color: papayawhip;
+}
+
+.player {
+  flex: 1;
+  display: inline-block;
+  width: 150px;
+  height: 270px;
+  background-color: steelblue;
+  border: solid 1px;
+}
+.profileForm{
+    display:none ;
+}
+
+.hideShit{
+    display:none;
+}
+
+.showShit{
+    display:block;
+}
+
+.mainContainer{
+  margin:0 auto;
+  height:550px;
+}
+.homeContainer{
+  background:url('../images/hero.jpg');
+  background-size:cover;
+  height:550px;
+  background-repeat: no-repeat;
+  margin:0 auto;
+
+
+}
+
+.homeFooter{
+  background:#34bee7;
+  color:#fff;
+  text-align: center;
+  padding:20px;
+}
+
+.homeFooter h3{
+  font-size: 24px;
+  margin:0 0 5px 0;
+
+}
+
+.subTitle{
+  font-size: 16px;
+
+}
+
+.subFooter{
+  display: flex; 
+  padding-top:20px;
+}
+
+.subFooter div{
+  margin: 0 auto;
+  width:33%;
+  border:solid 1px;
+  padding:20px;
+}
+
+
+.heroText {
+    color:#333;
+    width: 45%;
+    padding: 200px 30px 30px 30px;
+    /* text-shadow: 2px 2px 2px rgba(0,0,0,0.3);*/
+}
+
+.heroText h3{
+    font-size:30px;
+    margin:0 0 10px 0;
+    font-weight:bold;
+  }
+
+.heroText button{
+  display:block;
+  margin:15px 0 15px 0;
+  background:green;
+  border:none;
+  padding:8px;
+  border-radius: 3px;
+}
