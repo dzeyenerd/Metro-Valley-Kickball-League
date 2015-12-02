@@ -141,7 +141,9 @@ nav a{
   padding:5px 5px 5px 20px;
 }
 
-
+/*///////////////////////////////////////////////////////////////
+    User signup login profile
+//////////////////////////////////////////////////////////////*/
 .content{
   width:auto;
   overflow: hidden;
@@ -185,6 +187,14 @@ nav a{
 .userPhoto{
   text-align: center;
 }
+
+/*.signup-pic {
+  width: 75px;
+  height: 75px;
+  float: right;
+  margin-right: 375px;
+  background-color: orange;
+}*/
 
 .userPhoto img{
   display: block;
@@ -320,7 +330,6 @@ input {
 }
 
 .signupContainer div{
-  display: inline-block;
   text-align: left
 }
 
@@ -334,7 +343,48 @@ input {
 
 .form-group{
   margin-bottom:15px;
-  display: block !important;
+  /*display: block !important;*/
+  display: flex;
+  /*background-color: red;*/
+}
+
+.foo {
+  flex:; 
+  /*background: blue;*/
+  font-family: 'Audiowide', cursive;
+  letter-spacing: 2px;
+  color: white;
+  text-shadow:5px 4px 10px #000000;
+}
+.bar {
+  flex:1;
+  width: 150px;
+ /* background-color: yellow;*/
+  /*font-family: 'Audiowide', cursive;*/
+  color: white;
+  ttext-shadow:5px 4px 10px #000000;
+}
+
+.foobar {
+  font-family: 'Audiowide', cursive;
+  color: white;
+  text-shadow:5px 4px 10px #000000;
+}
+
+.btn.btn-warning.btn-lg {
+  font-size: 15px;
+  font-family: 'Audiowide', cursive;
+  border-radius: 5px;
+  border-top: solid 1px black;
+  text-shadow:5px 4px 10px #000000;
+  color: white;
+}
+
+.signup-bio {
+  resize: none;
+  width: 340px;
+  height: 100px;
+  margin-top: 20px;
 }
 
 /*//////////////////////////////////////////////////////

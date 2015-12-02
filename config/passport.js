@@ -67,17 +67,19 @@ module.exports = function(passport) {
                     // var position = req.body.position.join(); 
                     var newUserMysql = {
                         username: username,
-                        password: bcrypt.hashSync(password)  // use the generateHash function in our user model
-                        // bio: req.body.bio
-                        // playername: req.body.playername
+                        password: bcrypt.hashSync(password),  // use the generateHash function in our user model
+                        bio: req.body.bio,
+                        name: req.body.name,
                         // position: position,
-                        // gender: req.body.gender,
+                        gender: req.body.gender,
                         // dob: req.body.dob,
                     };
 
-                    var insertQuery = "INSERT INTO users ( username, password, bio) values (?,?,)";
+                    console.log(newUserMysql);
 
-                    connection.query(insertQuery,[newUserMysql.username, newUserMysql.password,],function(err, rows) {
+                    var insertQuery = "INSERT INTO users ( username, password, name, bio, gender) values (?,?,?,?,?)";
+
+                    connection.query(insertQuery,[newUserMysql.username, newUserMysql.password, newUserMysql.name, newUserMysql.bio, newUserMysql.gender],function(err, rows) {
                         console.log(newUserMysql.gender)  
                         newUserMysql.id = rows.insertId;
 
