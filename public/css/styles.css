@@ -55,167 +55,170 @@ table {
 
 
 html,body{
-  height:100%;
+  height: 100%;
 }
 
-strong{
-  font-weight:600;
+strong {
+  font-weight: 600;
 }
 
-.container{
-  height:100%;
-  width:100%;
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
   font-family: 'Open Sans', sans-serif;
 }
 
-header{
+header {
   display: block;
-  height:60px;
-  line-height:40px;
-  width:100%;
-  border-bottom:solid 1px #ccc;
+  height: 80px;
+  line-height: 40px;
+  width: 100%;
+  border-bottom: solid 1px #ccc;
 }
 
-header span{
-  float:right;
-  display: inline-block;
+.flex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header span {
   padding-right: 40px;
-  padding-top:10px;
 }
 
 
-.greeting{
-  display:inline-block;
+.greeting {
+  display: inline-block;
   font-family: 'Audiowide', cursive;
   padding-right:30px;
   float:none;
 }
 
-.hello{
+.hello {
   padding:0;
   float:right;
 }
 
-.logout{
+.logout {
   float:none !important;
   float:right;
   font-family: 'Audiowide', cursive;
+  color: #34bee7;
 }
 
-.greeting:after{
-  clear:both
+.greeting:after {
+  clear: both;
 }
 
-nav{
-  background:#34bee7;
-  width:200px;
-  float:left;
-  height:100%;
+nav {
+  background: #3B4267;
+  width: 200px;
+  float: left;
+  height: 100%;
   display: table-cell;
 }
 
-nav ul{
-
+nav ul {
+ margin-top: 25px;
 }
 
-nav li{
-  line-height:30px;
-  border-bottom:solid 1px #eee;
-  font-size:22px
+nav li {
+  line-height: 30px;
+  font-size: 22px;
+
 }
 
 nav li:hover{
 
 }
 
-nav ul li a:hover{
- /* background:#3B4267;*/
+nav ul li a:hover {
+  color: #fff;
 }
 
-nav a{
-  color:#eee;
+nav a {
+  color: #ccc;
   font-family: 'Audiowide', cursive;
   letter-spacing: 2px;
   text-decoration: none;
-  display:block;
-  padding:5px 5px 5px 20px;
+  display: block;
+  padding: 5px 5px 5px 20px;
 }
 
 /*///////////////////////////////////////////////////////////////
     User signup login profile
 //////////////////////////////////////////////////////////////*/
-.content{
-  width:auto;
+.content {
+  width: auto;
   overflow: hidden;
-  margin-top:20px;
+  margin-top: 20px;
+  background-color: #FCFCFD;
 }
 
-.contentBox{
-  background:#34bee7;
-  border:solid 1px #ccc;
-  width:90%;
+.contentBox {
+  background: #FFF;
+  border: solid 1px #ccc;
+  width: 90%;
   overflow: hidden;
-  margin:0 auto;
+  margin: 0 auto;
   border-radius:6px;
-  min-height:200px;
-  padding:20px;
+  min-height: 200px;
+  padding: 20px;
 
 }
 
-.profileInfo{ 
-  font-size:22px; 
-  line-height:30px;
-  padding:0 20px;
+.profileInfo { 
+  font-size: 22px; 
+  line-height: 30px;
+  padding: 20px;
 }
-.clear{
-  clear:both;
-  display: block
+.clear {
+  clear: both;
+  display: block;
 }
 
-.profileInfo p{ 
-  border-bottom:dotted 1px;
+.profileInfo p { 
+  border-bottom: dotted 1px;
   padding:5px 0;
   font-family: 'Audiowide', cursive;
   letter-spacing: 2px;
 
 }
 
-.hide{
-  display:none;
+.hide {
+  display: none;
 }
 
-.userPhoto{
+.userPhoto {
   text-align: center;
 }
 
-/*.signup-pic {
-  width: 75px;
-  height: 75px;
-  float: right;
-  margin-right: 375px;
-  background-color: orange;
-}*/
 
-.userPhoto img{
+.userPhoto img {
   display: block;
   margin-bottom: 10px;
 }
 
-.photoForm{
+.photoForm {
   text-align: left;
   width: 200px;
   overflow: hidden;
 }
 
 
-.pimage{
+.pimage {
     position: relative;
     float: left;
     width:  150px;
     height: 150px;
     background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
   
 
@@ -225,48 +228,44 @@ nav a{
     margin: 10px 0px;
 }
 
-.info{
-  padding:0 20px;
+.info {
+  padding: 0 20px;
   border-right:solid 1px #eee;
   flex-grow: 1;
   flex-basis: 0;
 }
 
-.info:last-child{
-  border:none;
+.info:last-child { 
+  border: none;
 }
 
-.info h4{
-  font-weight:600;
-  font-size:18px;
+.info h4 { 
+  font-weight: 600;
+  font-size: 18px;
   margin-bottom: 15px;
   font-family: 'Audiowide', cursive;
   letter-spacing: 2px;
 }
 
-a.btn-default{
+a.btn-default {
   display: inline-block;
-  background:#ddd;
+  background: #ddd;
   color: white;
   padding: 6px 12px 8px 12px;
-  /*border: solid 2px, 1px, 2px, 1px black;*/
-  font-size:14px;
+  font-size: 14px;
   border-radius: 6px;
-  box-shadow: 3px 2px 0px #000000;
   line-height: 12px;
- 
-  /*margin-left:15px;*/
+  text-decoration: none;
 }
 
 a.btn-default.login {
-  float: right; 
   margin-left: 30px;
+  color: black;
   font-family: 'Audiowide', cursive;
  
 }
 
 a.btn-default.signup {
-  float: right;
   background-color: #34bee7;
   margin-left: 20px;
   font-family: 'Audiowide', cursive;
@@ -280,19 +279,19 @@ h1.title {
   margin-bottom: 20px;
   font-family: 'Audiowide', cursive;
   letter-spacing: 2px;
-  color: #34bee7;;
+  color: #333;
 }
 
-.profileContent{
-  display:flex;
+.profileContent {
+  display: flex;
 }
 
 .editProfile {
     padding: 0px 20px;
 }
 
-.flexedit{
-  display: flex
+.flexedit {
+  display: flex;
 }
 
 
@@ -304,24 +303,24 @@ input {
 }
 
 .editProfile input[type="text"] {
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 
 .editProfile textarea {
   border:solid 1px #999;
-  width:200px;
-  font-size:16px;
+  width: 200px;
+  font-size: 16px;
   }
 
-.editProfile label{
-  display: block;
-  font-weight:600;
-  padding-bottom:10px;
+.editProfile label {
+  display:  block;
+  font-weight: 600;
+  padding-bottom: 10px;
   font-family: 'Audiowide', cursive;
 }
 
-.buttongroup{
-  margin-top:20px;
+.buttongroup {
+  margin-top: 20px;
 }
 
 .loginContainer, .signupContainer {
@@ -329,8 +328,9 @@ input {
     padding: 40px;
 }
 
-.signupContainer div{
-  text-align: left
+.signupContainer div {
+  text-align: left;
+  margin-left: 45px;
 }
 
 .loginContainer button {
@@ -341,43 +341,48 @@ input {
 }
 
 
-.form-group{
-  margin-bottom:15px;
-  /*display: block !important;*/
+.form-group {
+  margin-bottom: 15px;
   display: flex;
-  /*background-color: red;*/
+  font-family: 'Audiowide', cursive;
+  letter-spacing: 2px;
+  color: #333;
+ 
 }
 
 .foo {
-  flex:; 
-  /*background: blue;*/
+  flex:.5; 
+ 
   font-family: 'Audiowide', cursive;
   letter-spacing: 2px;
-  color: white;
-  text-shadow:5px 4px 10px #000000;
-}
-.bar {
-  flex:1;
-  width: 150px;
- /* background-color: yellow;*/
-  /*font-family: 'Audiowide', cursive;*/
-  color: white;
-  ttext-shadow:5px 4px 10px #000000;
+  color: black;
+/*  text-shadow: 5px 4px 10px #000000;*/
+
 }
 
-.foobar {
-  font-family: 'Audiowide', cursive;
-  color: white;
-  text-shadow:5px 4px 10px #000000;
+
+.bar {
+  flex: 3;
+  width: 150px; 
 }
+
+.bar.text {
+  flex: 3;
+  width: 150px;
+  margin-left: 100px;
+}
+
+
 
 .btn.btn-warning.btn-lg {
-  font-size: 15px;
+  font-size: 12px;
   font-family: 'Audiowide', cursive;
   border-radius: 5px;
   border-top: solid 1px black;
-  text-shadow:5px 4px 10px #000000;
-  color: white;
+  color: black;
+  box-shadow: 3px 2px 0px #000000;
+  margin-right: 235px;
+  margin-top: 15px;
 }
 
 .signup-bio {
@@ -391,16 +396,16 @@ input {
     Home Page
 //////////////////////////////////////////////////////*/
 
-.mainContainer{
-  margin:0 auto;
-  height:550px;
+.mainContainer {
+  margin: 0 auto;
+  height: 550px;
 }
-.homeContainer{
-  background:url('../images/hero.jpg');
-  background-size:cover;
-  height:550px;
+.homeContainer {
+  background: url('../images/hero.jpg');
+  background-size: cover;
+  height: 550px;
   background-repeat: no-repeat;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .topbar {
@@ -412,56 +417,36 @@ input {
   color: white;
 }
 
-/*.home-signup {
-  background: #34bee7 ;
-  border-radius: 6px;
-  font-size: 20px;
-  border-radius: 6px;
-  box-shadow: 3px 2px 0px #000000;
-  float: right;
-  margin-left: 20px;
-  margin-right: 50px;
-}
-
-.home-login {
-  border-radius: 6px;
-  font-size: 20px;
-  border-radius: 6px;
-  box-shadow: 3px 2px 0px #000000;
-  float: right;
-  margin-left: 30px;
-}*/
-
-.homeFooter{
-  background:#34bee7;
-  color:#fff;
+.homeFooter {
+  background: #34bee7;
+  color: #fff;
   text-align: center;
-  padding:20px;
+  padding: 20px;
   font-family: 'Audiowide', cursive;
   text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 }
 
-.homeFooter h3{
+.homeFooter h3 {
   font-size: 24px;
-  margin:0 0 5px 0;
+  margin: 0 0 5px 0;
 
 }
 
-.subTitle{
+.subTitle {
   font-size: 16px;
 
 }
 
-.subFooter{
+.subFooter {
   display: flex; 
-  padding-top:20px;
+  padding-top: 20px;
 }
 
-.subFooter div{
+.subFooter div {
   margin: 0 auto;
-  width:33%;
-  border:solid 1px;
-  padding:20px;
+  width: 33%;
+  border: solid 1px;
+  padding: 20px;
 }
 
 
@@ -475,18 +460,18 @@ input {
     text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 }
 
-.heroText h3{
+.heroText h3 {
     font-size:30px;
-    margin:0 0 10px 0;
-    font-weight:bold;
+    margin: 0 0 10px 0;
+    font-weight: bold;
   }
 
-.heroText button{
-  display:block;
-  margin:15px 0 15px 0;
-  background:green;
-  border:none;
-  padding:8px;
+.heroText button {
+  display: block;
+  margin: 15px 0 15px 0;
+  background: green;
+  border: none;
+  padding: 8px;
   border-radius: 3px;
 }
 /*////////////////////////////////////////////////
@@ -504,21 +489,36 @@ leauges page
 }
 
 .league-img {
-  flex:2 ;
-  /*float: right;*/
-  width:  300px;
+  flex: 2 ;
   height: 350px;
   background: white;
-  background:url('../images/game.jpg');
-  background-size: cover;
+  background: url('images/mvkb.svg');
+  background-size: contain;
 }
 
 
 #map-canvas {
   flex: 2;
   height: 350px;
-  /*float: right;*/
-  /*top: 135px;
-  right: 50px;*/
 }
 
+/*//////////////////////////////////////////////////////////////////
+        Schedule page
+///////////////////////////////////////////////////////////////////*/
+.month-flex {
+display: flex;
+
+}
+
+.month-calendar {
+  flex:;
+  margin-left: 10%;
+
+}
+
+.league-img {
+  flex:;
+  background-size: contain;
+  background: cover;
+  background-repeat: no-repeat ;
+}

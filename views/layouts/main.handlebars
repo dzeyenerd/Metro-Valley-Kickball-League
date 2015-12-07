@@ -16,19 +16,20 @@
   </head>
   <body>
   	<div class="container">
-	  	<header>
-	     {{#if user.username}}
+	  	<header class="flex-header">
+  			<img  class="logo" src="images/mvkb.svg" alt="">
+	     	{{#if user.username}}
 
-	     	<span class="hello">
-				<span class="greeting">Hello, {{user.name}}</span>
-				<span class="logout"><a href="/logout">Logout</a>
-			</span>
+		     	<span class="hello">
+					<span class="greeting">Hello, {{user.name}}</span>
+					<span class="logout"><a href="/logout">Logout</a>
+				</span>
 
 			{{else}}
-			<span>
-			    <a href="/login" class="btn-default login">Login</a>
-	            <a href="/signup" class="btn-default signup">Signup</a>
-        	</span>
+				<span>
+		            <a href="/signup" class="btn-default signup">Signup</a>
+				    <a href="/login" class="btn-default login">Login</a>
+	        	</span>
 			{{/if}}
 	  	</header>
 	  	<nav>
